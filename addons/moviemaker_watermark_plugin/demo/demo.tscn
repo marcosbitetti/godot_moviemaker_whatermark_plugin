@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjcjsi2foea53"]
+
+[ext_resource type="Texture2D" uid="uid://7poghtbdv6ln" path="res://icon.svg" id="1_8so8g"]
+
+[sub_resource type="Shader" id="Shader_u4k52"]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+uniform sampler2D image : source_color, repeat_enable;
+
+void fragment() {
+	// 10 by ratio
+	vec2 uv = (UV + vec2(TIME * .09, sin(TIME * .8) * .2)) * vec2(10., 5.625);
+	COLOR = texture(image, uv);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e0qrr"]
+shader = SubResource("Shader_u4k52")
+shader_parameter/image = ExtResource("1_8so8g")
+
+[node name="demo" type="ColorRect"]
+material = SubResource("ShaderMaterial_e0qrr")
+offset_right = 1280.0
+offset_bottom = 720.0

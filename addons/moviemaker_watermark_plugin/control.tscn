@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cvwcaeisq5tcy"]
+
+[node name="control" type="MenuButton"]
+offset_right = 100.0
+offset_bottom = 116.0
+text = "Top Left"
+item_count = 4
+popup/item_0/text = "Top Left"
+popup/item_0/id = 0
+popup/item_1/text = "Top Right"
+popup/item_1/id = 1
+popup/item_2/text = "Bottom Left"
+popup/item_2/id = 2
+popup/item_3/text = "Bottom Right"
+popup/item_3/id = 3
