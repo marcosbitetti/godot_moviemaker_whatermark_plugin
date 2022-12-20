@@ -22,3 +22,7 @@ window/size/viewport_height=720
 [editor]
 
 movie_writer/movie_file="/home/bitetti/teste.avi"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/moviemaker_watermark_plugin/plugin.cfg")

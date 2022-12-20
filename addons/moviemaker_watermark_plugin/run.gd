@@ -14,6 +14,7 @@ func _start():
 	image.ignore_texture_size = false
 	image.texture = tex
 	image.size = Vector2(tex.get_width(), tex.get_height())
+	image.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	if ProjectSettings.get_setting(SETTING) == 1:
 		image.position = Vector2(get_tree().root.get_visible_rect().size.x - image.size.x - M, M)
 	elif ProjectSettings.get_setting(SETTING) == 2:
