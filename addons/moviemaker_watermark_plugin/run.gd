@@ -1,10 +1,9 @@
 extends Node
 
-const SETTING = "application/plugin/watermark"
+const SETTING = "application/plugin_watermark"
 const M = 8
 
 func _ready():
-	print("reade")
 	call_deferred("_start")
 
 func _start():
